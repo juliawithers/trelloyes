@@ -12,8 +12,10 @@ import React from 'react';
 export default function Card(props) {
     return(
     <div className="Card">
+        {/* need to pass down the delete card button from App - List*/}
         <button 
-        type="button"
+            onClick = {() => props.onDeleteCard(props.listId,props.cardId)}
+            type="button"
         >
             delete
         </button>
@@ -22,4 +24,3 @@ export default function Card(props) {
     </div>
     )
 }
-
